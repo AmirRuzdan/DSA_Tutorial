@@ -24,7 +24,7 @@ int pivot(int array[], int n)
 
 int main()
 {
-int arr[] = {8,10,17,1,3};
+int arr[5] = {8,10,17,1,3};
 cout<<"The pivot element is "<<pivot(arr,5)<<endl;
     return 0;
 }
