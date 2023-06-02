@@ -11,7 +11,7 @@ int binarysearch( int arr[], int n, int key) //n = size of array
 
         if(arr[mid]== key)
         {
-            return mid;   //we need to return the position of the key element
+            return mid;   
 
         }
 
