@@ -5,7 +5,7 @@ int pivot(int array[], int n)
 {
     int i = 0;
     int j = n-1;
-    int mid = i+(j-i)/2;
+    int mid = i+(j-i)/2;  //avoids data limit error
     while (i<j)
     {
         if ( array[mid]>=array[0])
@@ -18,7 +18,7 @@ int pivot(int array[], int n)
         }
         mid = i + (j-i)/2;
     }
-    return i;
+    return i;   //can also be returned j;
 
 }
 
