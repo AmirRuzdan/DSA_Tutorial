@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-int returnpivot(int array[], int n)
+int returnpivot(int array[], int n) /*Finding the pivot element*/
 {
     int i = 0;
     int j = n-1;
@@ -19,7 +19,7 @@ int returnpivot(int array[], int n)
     }
     return i;   //can also be returned j;
 }
-int binarysearch( int arr[], int start,int end, int key) //n = size of array
+int binarysearch( int arr[], int start,int end, int key) /* Applying binary search after finding pivot element*/
 {
     int i = start ;
     int j = end-1;
