@@ -16,7 +16,7 @@ long long int squareroot( int n)
         }
         if (square<n)   
         {
-            long long int ans = mid;
+            ans = mid;
             i = mid + 1;
         }
         else
