@@ -5,7 +5,7 @@ long long int squareroot( int n)
 {
     int i = 0;
     int j = n;
-    int ans = -1;
+    int ans ;
     long long int mid = i + ( j-i)/2;
     while(i<=j)
     {
