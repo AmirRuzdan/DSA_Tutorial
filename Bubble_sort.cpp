@@ -16,7 +16,7 @@ void bubblesort(int array[], int size)
             }
         }
         if(swapped== false)
-        {
+        { // already sorted
             break;
         }
     }
