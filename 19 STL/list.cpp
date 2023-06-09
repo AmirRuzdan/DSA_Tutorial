@@ -21,5 +21,15 @@ int main()
     }cout<<endl;
     cout<<"Size of list after erasing = "<<l.size()<<endl;
 
+
+    list<int> news(10,100);    //new is a C++ keyword
+    cout<<"printing news list = ";
+    for (int i:news)
+    {
+        cout<<i<<" ";
+    }cout<<endl;
+
+
+     
     return 0;
 }
