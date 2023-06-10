@@ -14,15 +14,11 @@ void print(vector<int> v)
 
 vector<int> reverse(vector<int> v)
 {
-    int i = 0;
-    int j = v.size()-1;
-    while(i<=j)
-    {
-        swap(v[i], v [j]);
-        i++;
-        
-
-    }
+    int mid = v.size()/2;
+    for(int i = 0; i <mid;i++)
+ {
+    swap(v[i],v[v.size()-i]);
+ }
     return v;
 }
 
@@ -39,6 +35,7 @@ int main()
     cout<<"Before reversing =";
     print(v);
     cout<<endl;
+    cout<<"after reversing = ";
     vector<int> ans = reverse(v);
     print(ans);
 return 0;
