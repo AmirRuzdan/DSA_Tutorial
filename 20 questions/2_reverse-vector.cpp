@@ -17,7 +17,7 @@ vector<int> reverse(vector<int> v)
     int mid = v.size()/2;
     for(int i = 0; i <mid;i++)
  {
-    swap(v[i],v[v.size()-i]);
+    swap(v[i],v[v.size()-1-i]);
  }
     return v;
 }
@@ -38,5 +38,6 @@ int main()
     cout<<"after reversing = ";
     vector<int> ans = reverse(v);
     print(ans);
+
 return 0;
 }
