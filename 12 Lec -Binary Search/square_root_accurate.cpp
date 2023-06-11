@@ -27,11 +27,31 @@ long long int squarerootinteger(int n)
     return ans;
 }
 
+double moreprecision(int n , int precision, int integerpart)
+{
+    double factor =1;
+    double answer = integerpart;
+     for(int i =0; i<precision;i++)
+        {
+            factor = factor/10;
+            for (double j = answer; j*j<n; j = j+factor)
+            {
+                answer = j;          //important part 
+            }
+        }
+        return answer;
+}
 int main()
 {
     int x;
+    int p;
     cout<<"enter any number = ";
     cin >>x;
-    cout<<"the square root of your number is "<<squarerootinteger(x)<<endl;
+    double integ = squarerootinteger(x);
+    // cout<<"Enter the precision = ";
+    // cin>>p;
+    double final=moreprecision(x,3,integ);
+    cout<<"The square root is "<<final; 
+
     return 0;
 }
