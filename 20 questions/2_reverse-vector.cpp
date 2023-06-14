@@ -3,7 +3,7 @@
 #include<vector>
 using namespace std;
 
-void print(vector<int> v)
+void print(const vector<int>& v)
 {
     for(int i:v)
     {
