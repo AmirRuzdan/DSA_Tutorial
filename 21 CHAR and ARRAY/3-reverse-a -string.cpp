@@ -2,6 +2,9 @@
 #include<iostream>
 using namespace std;
 
+
+
+
 void reverse( char name[], int size)
 {   
     int i = 0 ;
@@ -10,6 +13,11 @@ void reverse( char name[], int size)
     {
         swap(name[i++], name[j--]);
     }
+}
+
+bool palindrome(char array[] )
+{
+    
 }
 
 
