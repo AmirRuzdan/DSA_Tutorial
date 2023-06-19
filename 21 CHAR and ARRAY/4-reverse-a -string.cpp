@@ -10,7 +10,7 @@ char lowercase ( char ch)
     }
     else
     {
-        char temp = ch -'A'+'a';
+        char temp = ch -'A'+'a';     // IMPORTANT STEP = 
         return temp; 
     }
 }
