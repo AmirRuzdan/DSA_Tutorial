@@ -24,7 +24,7 @@ public:
     double getHeadLoss() const {
         return headLoss;
     }
-    
+    float f =0.0;
     void calculateHeadLoss() {
         headLoss = (f * length * flow * flow) / (2 * diameter * 9.8)
 ;
