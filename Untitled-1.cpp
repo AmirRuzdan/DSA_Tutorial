@@ -1,5 +1,4 @@
 #include <iostream>
-#include<bits/stdc++.h>
 #include <cmath>
 
 #define MAX_ITERATIONS 100
