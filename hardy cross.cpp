@@ -1,92 +1,113 @@
 #include <iostream>
-#include <cmath>
-
-#define MAX_ITERATIONS 100
-#define EPSILON 0.0001
+#include <vector>
 
 using namespace std;
 
-struct Pipe {
+class Pipe {
+private:
     double length;
     double diameter;
-    double roughness;
     double flow;
-    double frictionFactor;
-    double deltaH;
+    double headLoss;
+
+public:
+    Pipe(double len, double dia) : length(len), diameter(dia), flow(0.0), headLoss(0.0) {}
+
+    void setFlow(double f) {
+        flow = f;
+    }
+
+    double getFlow() const {
+        return flow;
+    }
+
+    double getHeadLoss() const {
+        return headLoss;
+    }
+    
+    void calculateHeadLoss() {
+        headLoss = (f * length * flow * flow) / (2 * diameter * 9.8)
+;
+    }
 };
 
-void calculateFrictionFactor(Pipe& pipe) {
-    // Calculate friction factor using the Colebrook equation
-    double Re = (4 * pipe.flow) / (M_PI * pipe.diameter);    //(Re = 4*Q/pi*D*nu )
-    double A = log10(pipe.roughness / (3.7 * pipe.diameter) + 2.51 / pow(Re, 0.9));
-    double B = pow(-2.0 * log10(pipe.roughness / (3.7 * pipe.diameter) + 2.51 / pow(Re, 0.9)), -2.0);
-    pipe.frictionFactor = 1 / (A * A);
-}
+class Network {
+private:
+    vector<Pipe> pipes;
+    double convergenceCriteria;
 
-void hardyCrossMethod(Pipe* pipes, int numPipes) {
-    int iterations = 0;
+public:
+    Network() : convergenceCriteria(0.001) {}
 
-    while (iterations < MAX_ITERATIONS) {
-        double totalFlowChange = 0.0;
-
-        // Calculate flow change for each pipe
-        for (int i = 0; i < numPipes; i++) {
-            Pipe& pipe = pipes[i];
-
-            // Calculate the friction factor
-            calculateFrictionFactor(pipe);
-
-            // Calculate the head loss
-            double headLoss = pipe.frictionFactor * (pipe.length / pipe.diameter) * (pipe.flow * abs(pipe.flow));
-
-            // Calculate the flow change usig newton rhapson formula
-            double previousFlow = pipe.flow;
-            pipe.flow = previousFlow - pipe.deltaH / ((pipe.length / pipe.diameter) * pipe.frictionFactor);
-            double flowChange = abs(pipe.flow - previousFlow);
-
-            // Update the flow and total flow change
-            totalFlowChange += flowChange;
-        }
-
-        // Check for convergence
-        if (totalFlowChange < EPSILON) {
-            cout << "Converged after " << iterations << " iterations." << endl;
-            break;
-        }
-
-        iterations++;
+    void addPipe(double length, double diameter) {
+        Pipe pipe(length, diameter);
+        pipes.push_back(pipe);
     }
 
-    // Output the final flows
-    for (int i = 0; i < numPipes; i++) {
-        cout << "Flow in pipe " << i + 1 << ": " << pipes[i].flow << endl;
+    void solve() {
+        // Initialize the flows
+        for (int i = 0; i < pipes.size(); i++) {
+            pipes[i].setFlow(0.1); // Initial guess
+        }
+
+        bool converged = false;
+        int iteration = 0;
+
+        while (!converged) {
+            iteration++;
+            converged = true;
+
+            // Calculate head losses
+            for (int i = 0; i < pipes.size(); i++) {
+                pipes[i].calculateHeadLoss();
+            }
+
+            // Adjust flows
+            for (int i = 0; i < pipes.size(); i++) {
+                double flowCorrection = 0.0;
+
+                for (int j = 0; j < pipes.size(); j++) {
+                    if (i != j) {
+                        flowCorrection += pipes[j].getHeadLoss() * pipes[j].getFlow() / pipes[i].getHeadLoss();
+                    }
+                }
+
+                double newFlow = flowCorrection / ((pipes[i].getHeadLoss() / pipes[i].getFlow()) - 1.0);
+                double deltaFlow = newFlow - pipes[i].getFlow();
+
+                if (deltaFlow > convergenceCriteria) {
+                    converged = false;
+                }
+
+                pipes[i].setFlow(pipes[i].getFlow() + deltaFlow);
+            }
+
+            if (converged) {
+                cout << "Converged in " << iteration << " iterations." << endl;
+            }
+        }
     }
-}
+
+    void printResults() {
+        for (int i = 0; i < pipes.size(); i++) {
+            cout << "Pipe " << i + 1 << " Flow: " << pipes[i].getFlow() << endl;
+        }
+    }
+};
 
 int main() {
-    int numPipes;
-    cout << "Enter the number of pipes: ";
-    cin >> numPipes;
+    Network network;
 
-    Pipe* pipes = new Pipe[numPipes];
+    // Add pipes to the network
+    network.addPipe(100.0, 0.5);
+    network.addPipe(200.0, 0.4);
+    network.addPipe(150.0, 0.6);
 
-    for (int i = 0; i < numPipes; i++) {
-        cout << "Pipe " << i + 1 << endl;
-        cout << "Enter the length (in meters): ";
-        cin >> pipes[i].length;
-        cout << "Enter the diameter (in meters): ";
-        cin >> pipes[i].diameter;
-        cout << "Enter the roughness (in meters): ";
-        cin >> pipes[i].roughness;
-        cout << "Enter the initial flow (in cubic meters per second): ";
-        cin >> pipes[i].flow;
-        pipes[i].deltaH = 0.0;  // Initialize deltaH to zero
-        cout << endl;
-    }
+    // Solve the network
+    network.solve();
 
-    hardyCrossMethod(pipes, numPipes);
-
-    delete[] pipes;
+    // Print the results
+    network.printResults();
 
     return 0;
 }
