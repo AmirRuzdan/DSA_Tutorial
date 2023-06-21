@@ -60,7 +60,7 @@ vector<int> arraysum( vector<int> a , int n , vector<int> b , int m)
         j--;
 
     }
-    return reverse(ans) ;
+    return reverse(ans) ;    // we are reversing this because the final answer will b ereturned in reversed order
     
     
 }
@@ -69,8 +69,12 @@ vector<int> arraysum( vector<int> a , int n , vector<int> b , int m)
 
 int main() 
 {
-    vector<int> vec1 = { 2,3,4,5};
-    vector<int> vec2 = { 2,3,4,5};
-    arraysum(vec1,4, vec2,4);
+    vector<int> vec1 = { 9,9,9,9};
+    vector<int> vec2 = { 9,9,9,9};
+    vector<int> answer =   arraysum(vec1,4, vec2,4);
+    for ( int i:answer)
+    {
+        cout<<i<< " ";
+    }
 return 0;
 }

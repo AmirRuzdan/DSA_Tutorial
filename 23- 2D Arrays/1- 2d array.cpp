@@ -27,7 +27,6 @@ int main()
     {
         for (int j = 0; j < 4; j++)
         {
-            cout<<"Enter the element of "<<i<<"and "<<j ;
             cin>>array1[i][j];
         }
     }
@@ -45,7 +44,7 @@ int main()
     // for (int j = 0; j < 4; j++)
     // {
     //     for (int i = 0; i < 3; i++)
-    //     {
+    //     { 1 2 3 4 5 6 7 8 9 10 11 12 
     //          cout<<"Enter the element of "<<j<<"and "<<i ;
     //         cin>>arr2[i][j];
     //     }
@@ -61,16 +60,16 @@ int main()
         }
         cout<<endl;
     }
-int targetnumber;
-cout<<"Enter the element you want to find = ";
-cin>>targetnumber;
-if(arraysearch(array1,targetnumber,3,4))
-{
-    cout<< "Element is found";
-}
-else{
-    cout<<"Not found";
-}
+// int targetnumber;
+// cout<<"Enter the element you want to find = ";
+// cin>>targetnumber;
+// if(arraysearch(array1,targetnumber,3,4))
+// {
+//     cout<< "Element is found";
+// }
+// else{
+//     cout<<"Not found";
+// }
 
 
 
