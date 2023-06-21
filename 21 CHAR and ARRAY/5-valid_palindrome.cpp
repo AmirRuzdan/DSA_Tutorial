@@ -42,7 +42,7 @@ bool palindrome(string s)
     }
     return 0;
 }
-// removing extra characters by adding string into the temp string
+// removing extra characters  and ading only valid characters to the temp string 
 bool checkpalindrome (string s)
 {
     string temp = "";
