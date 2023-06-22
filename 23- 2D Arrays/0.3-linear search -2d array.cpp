@@ -1,4 +1,3 @@
-#include <bits/stdc++.h>
 #include<iostream>
 using namespace std;
 bool arraysearch(int array[][4],int number, int row,int column)     // why giving column is necessary to avoid error?
