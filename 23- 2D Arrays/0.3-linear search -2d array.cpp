@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-bool arraysearch(int array[][4],int number, int row,int column)     // why giving column is necessary to avoid error?
+bool arraysearch(int array[3][4],int number, int row,int column)     // why giving column is necessary to avoid error?
 {
     for (int i = 0; i < 3; i++)
     {
