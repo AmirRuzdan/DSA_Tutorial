@@ -1,0 +1,1 @@
+{"name":"Local: testing","url":"d:\\DSA_Tutorial\\24- Maths\\testing.cpp","tests":[{"id":1687963593929,"input":"4\n6 2 0 80\n6 2 1 80\n6 2 4 80\n6 2 6 80","output":"80\n90\n110\n140"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\DSA_Tutorial\\24- Maths\\testing.cpp","group":"local","local":true}
