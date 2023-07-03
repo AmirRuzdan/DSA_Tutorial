@@ -4,14 +4,14 @@ using namespace std;
 int main() 
 {
     int num = 5;
-    int i = 10;
-    cout<<num<<endl;
+    int *ptr = &num;
 
-    // address of operator --> &
-    cout<<"Address of num is "<< &num <<endl;       // pointers stores address data
 
-    int *ptr = &i;
-    
+    cout<<"Address (&num) of num is "<< &num <<endl;       // pointers stores address data
+
+    cout<<"The value (*ptr) is = "<<*ptr<<endl;
+    cout<<"*ptr stores value of num"<<*ptr<<endl;
+    cout<<"The value of ptr is = "<<ptr<<endl;
 
 return 0;
 }

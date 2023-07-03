@@ -1,0 +1,1 @@
+{"name":"Local: test","url":"d:\\DSA_Tutorial\\25- Pointers\\test.cpp","tests":[{"id":1688386270417,"input":"5\n2 2\n4 4\n3 6\n8 32\n200000000 20000000000000000","output":"YES\nNO\nNO\nYES\nYES"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\DSA_Tutorial\\25- Pointers\\test.cpp","group":"local","local":true}

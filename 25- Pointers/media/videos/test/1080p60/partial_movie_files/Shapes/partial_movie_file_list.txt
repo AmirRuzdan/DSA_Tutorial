@@ -1,0 +1,8 @@
+# This file is used internally by FFMPEG.
+file 'file:D:/DSA_Tutorial/25- Pointers/media/videos/test/1080p60/partial_movie_files/Shapes/1413466013_4072326920_1103720945.mp4'
+file 'file:D:/DSA_Tutorial/25- Pointers/media/videos/test/1080p60/partial_movie_files/Shapes/1672018281_2206304297_3192921534.mp4'
+file 'file:D:/DSA_Tutorial/25- Pointers/media/videos/test/1080p60/partial_movie_files/Shapes/1672018281_4038153450_3689963194.mp4'
+file 'file:D:/DSA_Tutorial/25- Pointers/media/videos/test/1080p60/partial_movie_files/Shapes/1672018281_475470952_2421924216.mp4'
+file 'file:D:/DSA_Tutorial/25- Pointers/media/videos/test/1080p60/partial_movie_files/Shapes/1672018281_2601308544_3732530486.mp4'
+file 'file:D:/DSA_Tutorial/25- Pointers/media/videos/test/1080p60/partial_movie_files/Shapes/1672018281_1830422616_1014541748.mp4'
+file 'file:D:/DSA_Tutorial/25- Pointers/media/videos/test/1080p60/partial_movie_files/Shapes/1672018281_190800790_4011837276.mp4'
