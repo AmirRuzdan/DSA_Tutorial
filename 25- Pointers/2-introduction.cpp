@@ -21,15 +21,27 @@ int main()
     // cout<<"value of num is = "<<num<<endl;
 
     int *p  = &num;
-    cout<<"value of *p = "<<*p<<endl;
+    cout<<"value of *p before= "<<*p<<endl;
     (*p)++;
-    cout<<"value of *p = "<<*p<<endl;
+    cout<<"value of *p now = "<<*p<<endl;
 
-    int *q = p;                      //copying one pointer to another pointer
+    int q = *p;                      //copying one pointer to another pointer
     cout<<"Value of p = "<<p<<endl;
     cout<<"Value of q = "<<q<<endl;
     cout<<"Value of *p = "<<*p<<endl;
-    cout<<"Value of *q = "<<*q<<endl;
+    // cout<<"Value of *q = "<<*q<<endl;
+
+
+    //important concepts
+
+    int i = 3;
+    int *t = &i;
+    // cout<<(*t)++<<endl;
+    *t = *t +1;
+    cout<<*t<<endl;
+    t= t+1;
+    
+
 
 
 return 0;
