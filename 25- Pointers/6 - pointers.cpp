@@ -5,6 +5,7 @@ int main()
 {
 cout<<"hello";
 cout<<"helllo new";
+vector<int>;
 
 return 0;
 }
