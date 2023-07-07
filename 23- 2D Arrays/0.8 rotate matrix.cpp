@@ -2,7 +2,6 @@
 #include<iostream>
 using namespace std;
 
-_mm_xor_pd
 
 
 
