@@ -55,9 +55,9 @@ for(int i=0; i<n ;++i)
 
     int arrivals = arrival_count +1;
     int departure = departure_count +1;
-    cout<<"Arrivals count = "<<arrival_count<<endl;
-    cout<<"Departure count = "<<departure_count<<endl;
-    cout<<"Coincident value "<<coincide<<endl;
+    cout<<"Arrivals count = "<<arrivals<<endl;
+    cout<<"Departure count = "<<departure<<endl;
+    cout<<"Coincident value "<<coincide+1<<endl;
 
 	}
 	return 0;
