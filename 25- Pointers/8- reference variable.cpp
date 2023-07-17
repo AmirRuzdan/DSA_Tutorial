@@ -2,17 +2,14 @@
 #include<iostream>
 using namespace std;
 
+////   BAD PRACTICE    ////    because it returns a local pointer of the function
+int& function(int a )
+{
+    int num = a;
+    int &ans = num;     //creating a reference variable
+    return ans;
+}
 
-
-
-////   BAD PRACTICE    ////
-// int& function(int a )
-// {
-//     int num = a;
-//     int &ans = num;     //creating a reference variable
-//     return ans;
-// }
-//// BAD PRACTICE   ////
 
 int* func(int num)
 {
@@ -43,7 +40,7 @@ int main()
 int n = 5;
 cout<<"Before value of n = "<<n<<endl;
 // update1(n);
-function(n);
+// function(n);
 cout<<"After value of n = "<<n<<endl;
 
 return 0;
