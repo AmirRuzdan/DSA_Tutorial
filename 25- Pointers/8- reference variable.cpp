@@ -4,7 +4,27 @@ using namespace std;
 
 
 
-void update(int n )
+
+////   BAD PRACTICE    ////
+// int& function(int a )
+// {
+//     int num = a;
+//     int &ans = num;     //creating a reference variable
+//     return ans;
+// }
+//// BAD PRACTICE   ////
+
+int* func(int num)
+{
+    int* ptr = &num;
+    return ptr;
+}
+
+void update1(int n )
+{
+    n++;
+}
+void update2(int& n )
 {
     n++;
 }
@@ -22,7 +42,8 @@ int main()
 
 int n = 5;
 cout<<"Before value of n = "<<n<<endl;
-update(n);
+// update1(n);
+function(n);
 cout<<"After value of n = "<<n<<endl;
 
 return 0;
