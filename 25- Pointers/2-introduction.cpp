@@ -6,9 +6,9 @@ int main()
 
     // int *p ;  // bad practice--> pointer to int is created and pointing to some garbage address
     // cout<<*p<<endl;
-    // int num = 5;
 
-    // int *p= &num ;
+    // int num = 5;
+    // int *p= &num ;       
 
     // int *p= 0;
     // p = &num;
@@ -18,17 +18,22 @@ int main()
     int num = 5;
     int a = num;
     a++;
-    // cout<<"value of num is = "<<num<<endl;
+    cout<<"value of num is = "<<num<<endl;
+    cout<<"value of a is = "<<a<<endl;
 
     int *p  = &num;
     cout<<"value of *p before= "<<*p<<endl;
     (*p)++;
     cout<<"value of *p now = "<<*p<<endl;
 
-    int q = *p;                      //copying one pointer to another pointer
+
+    //copying one pointer to another pointer
+    int q = *p;    
+
     cout<<"Value of p = "<<p<<endl;
     cout<<"Value of q = "<<q<<endl;
     cout<<"Value of *p = "<<*p<<endl;
+    
     // cout<<"Value of *q = "<<*q<<endl;
 
 
@@ -36,13 +41,10 @@ int main()
 
     int i = 3;
     int *t = &i;
-    // cout<<(*t)++<<endl;
-    *t = *t +1;
+    cout<<"Value of *t = "<<(*t)++<<endl;
+    // *t = *t +1;
     cout<<*t<<endl;
     t= t+1;
     
-
-
-
 return 0;
 }

@@ -13,7 +13,7 @@ int main()
     int col;
     cout<<"Enter the number of columns = ";
     cin>>col;
-//int *arr = new int[n]     ---> for one dimensional array   
+    //int *arr = new int[n]     ---> for one dimensional array   
 
    //CREATING A 2D ARRAY
     int **arr = new int*[row];   // array of pointers in stack memory 
