@@ -14,13 +14,13 @@ using namespace std;
 //     *p = *p +1;
 // }
 
-int getsum(int arr[], int n)             // in function it doesnt pass entire array but the pointer *arr and address of first array
+int getsum(int arr[], int n)             // in function, it doesnt pass entire array but the pointer *arr and address of first array
 {
     int sum = 0 ; 
     // cout<<endl<<"Size of array inside the function  is ="<<sizeof(arr)<<endl;
     for (int i = 0; i < n; i++)
     {
-        sum = sum + arr[i];
+        sum = sum + i[arr];                       // arr[i] = i[arr]
     }
     return sum ;
     

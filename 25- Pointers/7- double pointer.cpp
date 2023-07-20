@@ -4,7 +4,7 @@ using namespace std;
 
 void update(int **p2)
 {
-    // p = p+1;     -- >no changes occur
+    // p2 = p2+1;     -- > NO changes occur
 
     //*p2 = *p2 +1;   --> value of ptr changes
 
