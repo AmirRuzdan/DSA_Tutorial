@@ -38,6 +38,11 @@ int main()
         }
         cout<<endl;
     }
-
+    // RELEASING MEMORY
+    for (int i = 0; i < row; i++)
+    {
+        delete [ ] arr[i];
+    }
+    
 return 0;
 }
