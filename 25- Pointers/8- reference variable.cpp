@@ -3,12 +3,12 @@
 using namespace std;
 
 ////   BAD PRACTICE    ////    because it returns a local pointer created inside the function of the function
-int& function(int a )
-{
-    int num = a;
-    int &ans = num;     //creating a reference variable
-    return ans;
-}
+// int& function(int a )
+// {
+//     int num = a;
+//     int &ans = num;     //creating a reference variable
+//     return ans;
+// }
 
 
 int* func(int num)

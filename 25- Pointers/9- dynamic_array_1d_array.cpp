@@ -24,11 +24,6 @@ int main()
     int ans = getsum(arr, n);
     cout<<ans<<endl;
 
-
-
-
-
-    
    //static
     while(true)
     {
@@ -43,9 +38,6 @@ int main()
     // "delete" keyword is used to free heap or stack memory
     //VOID POINTER
     //ADRESS TYPECASTING
-
-
-
 
 
     return 0;

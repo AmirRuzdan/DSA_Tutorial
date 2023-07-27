@@ -43,6 +43,14 @@ int main()
     {
         delete [ ] arr[i];
     }
+
+    delete []arr;
+
+    // how to create a 2d array dynamically
+    // input/ output
     
+
+
+
 return 0;
 }
