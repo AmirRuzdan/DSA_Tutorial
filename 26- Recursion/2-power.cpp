@@ -11,13 +11,13 @@ int power(int n )
     }
 
     // recursive relation
-    int smaller = power(n-1);
-    int bigger = 2* smaller;
-    return bigger;
+    // int smaller = power(n-1);
+    // int bigger = 2* smaller;
+    // return bigger;
 
 
 
-    // return 2* power(n-1);   // code can be reduced in to simpler terms 
+     return 2* power(n-1);   // code can be reduced in to simpler terms 
 
 
 }
