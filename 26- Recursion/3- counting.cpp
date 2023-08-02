@@ -1,8 +1,6 @@
 #include<iostream>
 #include<bits/stdc++.h>
 using namespace std;
-
-
 void print(int n)
 {
     //base case
@@ -10,8 +8,9 @@ void print(int n)
     {
         return ;
     }
-    cout<<n<<endl;
     print(n-1);
+    
+    cout<<n<<endl;
     
 }
 
