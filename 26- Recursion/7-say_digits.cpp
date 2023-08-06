@@ -14,11 +14,12 @@ void saydigit(int n, string arr[] )
     // processing
     int ans = n%10;
     n= n/10;
-    cout<<arr[ans]<<" ";
 
     //recursive relation
     saydigit(n,arr);
-
+    
+    cout<<arr[ans]<<" ";
+    
 
     
 }
@@ -29,6 +30,7 @@ int main()
 {
     string arr[10] = {"zero","one","two","three","four","five","six","seven","eight","nine"};
     int n ;
+    cout<<"enter your number =";
     cin>>n;
 
     saydigit(n, arr);
