@@ -7,8 +7,7 @@ bool  is_found ( int arr[] , int size, int key )
 {   
     if(size==0)
     {
-        return false  ;
-
+        return false;
     }
     if( arr[0]== key)
     {
