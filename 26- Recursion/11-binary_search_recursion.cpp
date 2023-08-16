@@ -7,9 +7,15 @@ bool binary_search(int arr[], int start,int end , int key)
     //base case
     if (start >end )
     {
-        return ;
+        return false ;
     } 
     int mid = start +(end - start)/2;
+    cout<<"current value of the mid is = "<<arr[mid]<<endl;
+
+    if(arr[mid ]== key)
+    {
+        return true;
+    }
     if(arr[mid]<key)
     {
         return binary_search(arr, mid+1, end, key);
@@ -21,7 +27,6 @@ bool binary_search(int arr[], int start,int end , int key)
         
 
 }
-
 int main()
 {
 
@@ -30,10 +35,13 @@ int main()
     int key;
     cout<<"Enter your key element = ";
     cin>>key;
-    bool ans = binary_search(array, start, end , key);
-    cout<<"The key element is present at "<<ans<<endl;
-
-
-
+    bool ans = binary_search(array, 0, 5 , key);
+    if(ans )
+    {
+    cout<<"The key element is found "<<endl;
+    }
+    else{
+        cout<<"the element is not found"<<endl;
+    }
 return 0;
 }
