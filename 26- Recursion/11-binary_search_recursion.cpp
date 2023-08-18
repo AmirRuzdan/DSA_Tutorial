@@ -2,9 +2,20 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+void printarray(int arr[], int start, int end)
+{
+    for (int i = start; i <= end; i++)
+    {
+        cout<<arr[i]<<" ";
+    }cout<<endl;
+    
+}
+
 bool binary_search(int arr[], int start,int end , int key)
 {
     //base case
+
+    printarray(arr,start, end);
     if (start >end )
     {
         return false ;
