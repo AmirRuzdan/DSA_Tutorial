@@ -2,7 +2,7 @@
 #include<iostream>
 using namespace std;
 
-void reverse(int i , int j, string &name)
+void reverse(int i , int j, string &name)      // call by reference
 {    
     // j = name.length()-1;
     if(i>j)
