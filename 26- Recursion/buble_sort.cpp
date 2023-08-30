@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 #include<iostream>
 #include<stdio.h>
+#include<vector>
 #include<array>
 using namespace std;
 
@@ -13,7 +14,7 @@ void print(int array[], int size)
     }
 }
 
-void bubble_srt( int a[], int size)
+void bubble_srt(vector<int> &a, int size)
 {
     for (int i = 0; i < size-1; i++)
     {
@@ -34,7 +35,8 @@ void bubble_srt( int a[], int size)
 int main() 
 {
 
-    int array[5] = {9,6,4,21,5};
+    vector<int>& array
+    array= {9,6,4,21,5};
 
     bubble_srt(array,5);
     print(array, 5);
