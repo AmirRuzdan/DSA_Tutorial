@@ -51,6 +51,7 @@ int partition(int *arr, int start , int end)
         
         
     }
+    return pivotindex;
     
 }
 
@@ -78,7 +79,7 @@ void quicksort ( int *arr , int  start, int end)
 int main() 
 {
     int array[5] = {7,6,4,3,1};
-    int n = sizeof(array)/4;
+    int n = sizeof(array)/sizeof(array[0]);
     print(array, 5);
     cout<<endl;
     quicksort(array , 0 , n-1);
