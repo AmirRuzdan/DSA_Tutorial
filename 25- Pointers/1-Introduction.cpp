@@ -4,7 +4,6 @@ using namespace std;
 int main() 
 {
     int num = 5;
-    int i = 10;
     cout<<num<<endl;
     int *ptr = &num;            //creation of pointer
     // address operator --> &
