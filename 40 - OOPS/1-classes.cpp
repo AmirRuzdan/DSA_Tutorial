@@ -1,16 +1,17 @@
 #include <bits/stdc++.h>
 #include<iostream>
+#include "hero_external_class.cpp"
 using namespace std;
 
-class Hero {
+// class Hero {
 
-public:
-    // properties
-        int health;
-        char name[100];
-        int level;
+// public:
+//     // properties
+//         int health;
+//         char name[100];
+//         int level;
 
-};             
+// };             
 
 int main() 
 {

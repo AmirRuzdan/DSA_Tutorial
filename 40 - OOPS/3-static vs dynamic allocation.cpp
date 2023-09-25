@@ -2,15 +2,16 @@
 #include<iostream>
 using namespace std;
 
-class Hero {
+class Hero 
+{
 
 private:
-        int health;
+        int health;          // currently health is private
 
 public:
         char level;
 
-int getHealth() 
+int getHealth()              //using getter to access private property
 {
     return health;
 }
@@ -28,7 +29,7 @@ void setLevel(char ch)
 {
     level = ch;
 }
-
+};
 
 
 int main() 
