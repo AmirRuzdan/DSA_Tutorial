@@ -3,19 +3,17 @@
 using namespace std;
 
 
-
-
 int main() 
 {
-int n;
+long long n;
 cout<<"Enter the term of the fibonacci series";
 
 cin>>n;
 
 // int start =0;
-int firstvalue= 0;
-int secondvalue= 1;
-int currentvalue;
+long long firstvalue= 0;
+long long secondvalue= 1;
+long long currentvalue;
 
 for(int i =0 ; i<n;i++)
 {
@@ -24,13 +22,7 @@ for(int i =0 ; i<n;i++)
     firstvalue= secondvalue;
     secondvalue= currentvalue;
     cout<<currentvalue<<endl; 
-
 }
-
-
-
-
-
 
 return 0;
 }

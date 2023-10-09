@@ -2,7 +2,7 @@
 #include<iostream>
 using namespace std;
 
-int fib (int n )
+long long fib (int n )
 {
     //base case
     {
@@ -17,14 +17,12 @@ int fib (int n )
 
 }
 
-
 int main() 
 {
     int n;
     cout<<"enter the term of fibonacci number = ";
     cin>>n;
-    fib(n);
+    cout<<fib(n);
     
-
 return 0;
 }
