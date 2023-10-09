@@ -1,32 +1,29 @@
 #include <bits/stdc++.h>
 #include<iostream>
 using namespace std;
+
 void print( int *arr , int size)
 {
     for (int i = 0; i < size; i++)
     {
         cout<<arr[i]<<" ";
-    }
-    
+    } 
 }
+
 void merge_array( int *arr, int start , int end)
 {
     // start by dividing the array 
     int mid = ( start + end )/2;
 
-
     // length of first array 
     int len1 = mid- start + 1;
 
-
     // length of second array
     int len2 = end- mid;
-    
 
     // create empty arrays of len1 and len2 in heap memory
     int *first = new int[len1];
     int *second = new int[len2];
-
 
     //copying values in left part in empty arrays
     int k = start;          //k == main array index
@@ -35,14 +32,12 @@ void merge_array( int *arr, int start , int end)
         first[i] = arr[k++];
     }
 
-
     //copying values in left part in empty arrays
     k = mid+1;
     for (int i = 0; i < len2; i++)
     {
         second[i] = arr[k++];
     }
-
 
     //merge these 2 sorted arrays
     int index1= 0;
@@ -62,38 +57,29 @@ void merge_array( int *arr, int start , int end)
 
    while(index1<len1 )
     {
-     
         {
             arr[k++]= first[index1++];
         }
     }
-while( index2<len2)
+    while( index2<len2)
     {
             arr[k++]=second[index2++];
 
     }
-    
-     
-    
-    
     }
-
 
 void merge_sort( int *arr , int start , int end )
 {
-    
     // base case
     if(start>=end)
     {
         return;
     }
 
-
     int mid = (start+ end)/2;
 
     // sorting left part
     merge_sort(arr, start, mid);
-
 
     //sorting right part
     merge_sort(arr, mid+1,end);
@@ -108,5 +94,6 @@ int main()
     cout<<endl;
     merge_sort(array, 0 , n-1);
     print(array,10);
+    
 return 0;
 }

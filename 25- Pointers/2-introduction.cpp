@@ -22,9 +22,10 @@ int main()
     cout<<"value of a is = "<<a<<endl;
 
     int *p  = &num;
+    cout<<"Value of &num = "<<&num<<endl;
     cout<<"value of *p before= "<<*p<<endl;
     (*p)++;
-    cout<<"value of *p now = "<<*p<<endl;
+    cout<<"value of *p after = "<<*p<<endl;
 
 
     //copying one pointer to another pointer
