@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 #include<iostream>
-#include "hero.cpp"
+// #include "hero.cpp"
 using namespace std;
 
 // class Hero {
