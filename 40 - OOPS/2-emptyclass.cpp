@@ -2,11 +2,9 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+//EMPTY CLASS
 class Hero{
 
-  //properties  
-     
-    
 };
 
 

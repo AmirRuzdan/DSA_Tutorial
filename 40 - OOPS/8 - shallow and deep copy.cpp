@@ -9,7 +9,7 @@ class Hero{
     int health;
 
   public:  
-    char *name;     //heap allocation 
+    char *name;     //heap allocation because we dont know the size of the array
     char level;
 
 void print()

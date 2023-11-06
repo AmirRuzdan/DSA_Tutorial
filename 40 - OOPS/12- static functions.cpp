@@ -3,8 +3,9 @@
 #include<stdio.h>
 using namespace std;
 
-class Hero{
-
+class Hero
+{
+    
   private:  
     int health;
 
@@ -47,7 +48,7 @@ Hero ( int health , char level)
         this->health = temp.health;
         this->level = temp.level;
 
-     }
+    }
 //GETTER
     int gethealth()
     {
@@ -72,6 +73,7 @@ Hero ( int health , char level)
         strcpy(this->name , name );
     }
 
+    //STATIC FUNCTIONS    -- these functions can only access static members 
     static int random()
     {
         return timeTocomplete;
@@ -108,12 +110,12 @@ int main()
 
 
 
+
+
     
 
-    
 
-
-    // //Static
+    // Static
     // Hero a;             //memory deallocate (destructor called automatically)
 
     // //Dynamic

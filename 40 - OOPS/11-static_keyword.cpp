@@ -11,7 +11,7 @@ class Hero{
   public:  
     char *name;     //heap allocation 
     char level;
-    static int timeTocomplete;
+    static int timeTocomplete;   //data member which belongs to class adn we dont need to create an object to access
 
 void print()
 {
@@ -80,7 +80,7 @@ Hero ( int health , char level)
 
 };
 
-int Hero::timeTocomplete = 5;
+int Hero::timeTocomplete = 5;           //scope resolution operator ::
 
 int main()
 {

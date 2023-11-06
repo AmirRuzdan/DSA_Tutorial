@@ -49,11 +49,6 @@ int main()
     cout<<"b health is "<<(*b).gethealth()<<endl;
     cout<<"b level is "<<(*b).level<<endl;
 
-    
-    
-
-
-
 
     // h1.sethealth(89);
 
