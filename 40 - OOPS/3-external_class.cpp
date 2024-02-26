@@ -1,6 +1,6 @@
 #include<iostream>
 #include<bits/stdc++.h>
-// #include "Hero.cpp"           //external class
+// #include "Hero.cpp"    
 using namespace std;
 
 
@@ -11,7 +11,9 @@ private:
     
   public:  
     char level;
-//GETTER
+
+
+//GETTER      //getter function is used when the object is private
     int gethealth()
     {
         return health;
@@ -20,8 +22,10 @@ private:
     {
         return level;
     }
+
+
 //SETTER
-    void sethealth(int h )
+    void sethealth(int h )        //it is just a function to set health value for private class member
     {
         health = h;
     }
@@ -29,18 +33,18 @@ private:
     {
         level = ch;
     }
-
     
 };
+
 int main()
 {
     //creation of object
-    Hero h1;
-    h1.sethealth(79);
-    h1.level = 'S';
-    cout<<"size :"<<sizeof(h1 )<<endl;
-    cout<<"Health is = "<<h1.gethealth()<<endl;
-    cout<<"Level is = "<<h1.level<<endl;
+    Hero myhero;
+    myhero.sethealth(79);
+    myhero.level = 'S';
+    cout<<"size :"<<sizeof(myhero )<<endl;
+    cout<<"Health is = "<<myhero.gethealth()<<endl;    //using gethealth for private class member
+    cout<<"Level is = "<<myhero.level<<endl;           //public 
 
 return 0;
 }

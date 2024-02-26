@@ -1,14 +1,15 @@
- #include<iostream>
+#include<iostream>
 #include<bits/stdc++.h>
 using namespace std;
 
-class Hero{
-
-private:
-    int health;
+class Hero
+{
+    private:
+        int health;
     
-  public:  
-    char level;
+    public:  
+        char level;
+
 //GETTER
     int gethealth()
     {
@@ -18,6 +19,7 @@ private:
     {
         return level;
     }
+    
 //SETTER
     void sethealth(int h )
     {

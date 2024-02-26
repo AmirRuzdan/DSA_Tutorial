@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 #include<iostream>
-// #include "hero.cpp"
+// #include "hero.cpp"       //we can create external class file and include in our main code like this
 using namespace std;
 
 class Hero {
@@ -10,7 +10,6 @@ public:
         int health;
         char name[100];
         int level;
-
 };             
 
 int main() 
@@ -22,5 +21,11 @@ int main()
     spiderman.level = 9000;
     cout<<spiderman.health<<endl;
     cout<<spiderman.level<<endl;
+
+    Hero Superman;
+    Superman.health = 1000;
+    Superman.level = 10000000;
+    cout<<Superman.health<<endl;
+    cout<<Superman.level<<endl;
 return 0;
 }

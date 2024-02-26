@@ -1,4 +1,4 @@
- #include<iostream>
+#include<iostream>
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -18,6 +18,8 @@ private:
     {
         return level;
     }
+
+
 //SETTER
     void sethealth(int h )
     {
@@ -28,7 +30,6 @@ private:
         level = ch;
     }
 
-    
 };
 
 
