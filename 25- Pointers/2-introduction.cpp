@@ -23,7 +23,10 @@ int main()
 
     int *p  = &num;
     cout<<"Value of &num = "<<&num<<endl;
+    //pointer *p points at num -- value of num is *p
     cout<<"value of *p before= "<<*p<<endl;
+
+    //increasing the value of item stored at pinter p
     (*p)++;
     cout<<"value of *p after = "<<*p<<endl;
 
